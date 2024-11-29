@@ -53,8 +53,15 @@ const additionalCourses = ["Science", "Programming"];
 const mergedCourses = [...student.courses, ...additionalCourses];
 console.log("Merged Courses:", mergedCourses);
 
-//Part 5:
+//Part 5: Object Methods output
 console.log("Before adding a new course:", student.displayInfo());
 student.addCourse("Gym");
 console.log("After adding a new course:", student.displayInfo());
 console.log("Total number of courses:", student.totalCourses());
+
+//bonus task
+const totalScore = scores.reduce((accumulator, currentScore) => accumulator + currentScore, 0);
+const averageScore = totalScore / scores.length;
+
+console.log("Total Score:", totalScore);
+console.log("Average Score:", averageScore);
