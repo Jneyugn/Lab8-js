@@ -7,7 +7,15 @@ const student = {
     courses: ["Math", " Writ", " Programming"],
     displayInfo() {
         return `Student Name: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled ? "Yes" : "No"}, Courses: ${this.courses}`;
-      }
+      },
+//added course
+      addCourse(course) {
+        this.courses.push(course);
+        console.log(`Course "${course}" has been added.`);
+    },
+    totalCourses() {
+      return this.courses.length;
+  }
 };
 
 console.log("Name:", student.name);
@@ -44,3 +52,9 @@ console.log("Cloned Student:", clonedStudent);
 const additionalCourses = ["Science", "Programming"];
 const mergedCourses = [...student.courses, ...additionalCourses];
 console.log("Merged Courses:", mergedCourses);
+
+//Part 5:
+console.log("Before adding a new course:", student.displayInfo());
+student.addCourse("Gym");
+console.log("After adding a new course:", student.displayInfo());
+console.log("Total number of courses:", student.totalCourses());
