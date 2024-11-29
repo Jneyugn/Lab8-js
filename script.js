@@ -6,9 +6,9 @@ const student = {
     enrolled: true,
     courses: ["Math", " Writ", " Programming"],
     displayInfo() {
-        return `Student Name: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled} ? "Yes" : "No", Courses: ${this.courses}`;
+        return `Student Name: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled ? "Yes" : "No"}, Courses: ${this.courses}`;
       }
-}
+};
 
 console.log("Name:", student.name);
 console.log("Age:", student.age);
@@ -25,3 +25,14 @@ console.log("Converted Object:", newStudent);
 
 console.log("Are the two objects equal?", JSON.stringify(student) === JSON.stringify(newStudent));
 
+// Part 3: Using Destructuring 
+
+const { name, courses } = student;
+console.log("Name:", name);
+console.log("Courses:", courses);
+
+//Array
+const scores = [85, 92, 78, 90];
+const [firstScore, secondScore] = scores;
+console.log("First Score:", firstScore);
+console.log("Second Score:", secondScore);
