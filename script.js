@@ -36,3 +36,11 @@ const scores = [85, 92, 78, 90];
 const [firstScore, secondScore] = scores;
 console.log("First Score:", firstScore);
 console.log("Second Score:", secondScore);
+
+// Part 4: The Spread Operator
+const clonedStudent = { ...student, graduationYear: 2025 };
+console.log("Cloned Student:", clonedStudent);
+
+const additionalCourses = ["Science", "Programming"];
+const mergedCourses = [...student.courses, ...additionalCourses];
+console.log("Merged Courses:", mergedCourses);
