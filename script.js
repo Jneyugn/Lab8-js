@@ -1,3 +1,5 @@
+
+//part 1 - creating objects
 const student = {
     name: "Jenny Nguyen",
     age: 24,
@@ -12,3 +14,14 @@ console.log("Name:", student.name);
 console.log("Age:", student.age);
 
 console.log(student.displayInfo());
+
+//part 2 - json
+
+const studentJSON = JSON.stringify(student);
+console.log("JSON String:", studentJSON);
+
+const newStudent = JSON.parse(studentJSON);
+console.log("Converted Object:", newStudent);
+
+console.log("Are the two objects equal?", JSON.stringify(student) === JSON.stringify(newStudent));
+
